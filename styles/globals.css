@@ -46,6 +46,12 @@ a{color:var(--accent);text-decoration:none}
 .site-logo:hover{transform:scale(1.05)}
 @media(max-width:640px){.site-logo{height:36px}}
 
+.company-name{display:block}
+@media(max-width:768px){.company-name{display:none}}
+
+.mobile-menu-btn{display:none !important}
+@media(max-width:768px){.mobile-menu-btn{display:block !important}}
+
 nav{display:flex;align-items:center;gap:2rem;flex-wrap:wrap}
 @media(max-width:768px){nav{gap:1rem;width:100%;margin-top:0.5rem}}
 @media(max-width:480px){nav{gap:0.5rem}}

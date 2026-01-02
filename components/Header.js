@@ -9,18 +9,18 @@ export default function Header() {
 
   return (
     <header className="site-header">
-      <div className="container">
+      <div className="container" style={{display:'flex', alignItems:'center', justifyContent:'space-between', padding:'1rem 2rem', flexWrap:'wrap'}}>
         <div style={{display:'flex',alignItems:'center',gap:16}}>
           <Link href="/">
             <div style={{background:'linear-gradient(135deg, var(--accent), var(--accent-dark))', borderRadius:'10px', padding:'8px 14px', display:'flex', alignItems:'center', justifyContent:'center', width:'120px', height:'44px'}}>
               <img src="/white-logo.svg" alt="LTFF" style={{height:'28px', width:'auto'}} />
             </div>
           </Link>
-          <div style={{fontWeight:700,fontSize:'1.1rem',color:'var(--primary)',display:['none','none','block']}}>Learning Through Food Foundation Inc.</div>
+          <div className="company-name" style={{fontWeight:700,fontSize:'1.1rem',color:'var(--primary)'}}>Learning Through Food Foundation Inc.</div>
         </div>
         
         {/* Desktop Navigation */}
-        <nav style={{display:mobileMenuOpen ? 'none' : ['none','none','flex']}}>
+        <nav style={{display:mobileMenuOpen ? 'none' : 'flex'}}>
           <Link href="/#programs">Programs</Link>
           <Link href="/events">Events</Link>
           <Link href="/about">About</Link>
@@ -30,9 +30,9 @@ export default function Header() {
 
         {/* Mobile Menu Button */}
         <button 
+          className="mobile-menu-btn"
           onClick={toggleMenu}
           style={{
-            display:['block','block','none'],
             background:'none',
             border:'none',
             cursor:'pointer',
