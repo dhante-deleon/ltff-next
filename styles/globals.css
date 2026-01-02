@@ -40,18 +40,18 @@ a{color:var(--accent);text-decoration:none}
   z-index:20;
   backdrop-filter:blur(10px);
 }
-.header-top{display:flex;align-items:center;justify-content:space-between;padding:1rem 2rem}
-@media(max-width:768px){.header-top{padding:1rem 1rem;gap:1rem}}
+.header-top{display:flex;align-items:center;justify-content:space-between;padding:1rem 2rem;width:100%;gap:1rem}
+@media(max-width:768px){.header-top{padding:1rem}}
 
 .site-logo{height:44px;width:auto;border-radius:8px;transition:transform 0.3s}
 .site-logo:hover{transform:scale(1.05)}
 @media(max-width:640px){.site-logo{height:36px}}
 
-.company-name{display:block}
+.company-name{display:block;flex-shrink:0}
 @media(max-width:768px){.company-name{display:none}}
 
-.desktop-nav{display:flex;gap:2rem}
-@media(max-width:768px){.desktop-nav{display:none}}
+.desktop-nav{display:flex;gap:2rem;align-items:center;flex:1;justify-content:flex-end;margin-right:2rem}
+@media(max-width:768px){.desktop-nav{display:none !important}}
 .desktop-nav a{
   color:var(--primary);
   text-decoration:none;
@@ -63,9 +63,10 @@ a{color:var(--accent);text-decoration:none}
 @media(max-width:640px){.desktop-nav a{font-size:0.85rem}}
 .desktop-nav a:hover{color:var(--accent)}
 
-.mobile-menu-btn{display:none !important}
-@media(max-width:768px){.mobile-menu-btn{display:block !important;margin-left:auto}}
+.mobile-menu-btn{display:none;background:none;border:none;cursor:pointer;padding:8px;font-size:1.5rem;color:var(--primary);margin-left:auto}
+@media(max-width:768px){.mobile-menu-btn{display:block}}
 
+.mobile-nav{display:flex;flex-direction:column;padding:1rem 2rem;gap:1rem;background:white;border-top:1px solid var(--border)}
 .mobile-nav a{
   color:var(--primary);
   text-decoration:none;
