@@ -89,9 +89,9 @@ export default function About(){
       <main>
         <section style={{padding:'4rem 0', background:'linear-gradient(135deg, rgba(255,107,53,0.05) 0%, rgba(255,183,153,0.05) 100%)'}}>
           <div className="container">
-            <div style={{display:'grid', gridTemplateColumns:'1fr 2fr', gap:'3rem', alignItems:'start'}}>
+            <div style={{display:'grid', gridTemplateColumns:'1fr 2fr', gap:'3rem', alignItems:'start', '@media(max-width:768px)':{gridTemplateColumns:'1fr', gap:'2rem'}}}>
               {/* Image Section */}
-              <div style={{position:'relative', height:'217px', borderRadius:'16px', overflow:'hidden', boxShadow:'0 10px 30px rgba(0,0,0,0.1)'}}>
+              <div style={{position:'relative', height:'280px', borderRadius:'16px', overflow:'hidden', boxShadow:'0 10px 30px rgba(0,0,0,0.1)', maxWidth:'100%'}}>
                 <Image src="/about-logo.jpg" alt="Learning Through Food" fill style={{objectFit:'cover'}} quality={85} />
               </div>
 
@@ -148,7 +148,7 @@ export default function About(){
         <section style={{padding:'4rem 0'}}>
           <div className="container">
             <h2 style={{fontSize:'2rem', fontWeight:800, marginBottom:'3rem', textAlign:'center', color:'var(--primary)'}}>Our Impact</h2>
-            <div style={{display:'grid', gridTemplateColumns:'repeat(auto-fit, minmax(220px, 1fr))', gap:'2rem'}}>
+            <div style={{display:'grid', gridTemplateColumns:'repeat(auto-fit, minmax(200px, 1fr))', gap:'1.5rem'}}>
               {[
                 {number:'30+', label:'Years of Service'},
                 {number:'407+', label:'Children Fed Daily'},
@@ -169,6 +169,11 @@ export default function About(){
         @keyframes fadeIn {
           from { opacity: 0; transform: translateY(10px); }
           to { opacity: 1; transform: translateY(0); }
+        }
+        @media(max-width:768px){
+          div[style*="gridTemplateColumns: 1fr 2fr"] {
+            grid-template-columns: 1fr !important;
+          }
         }
       `}</style>
     </>

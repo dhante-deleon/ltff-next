@@ -1,6 +1,12 @@
 import Link from 'next/link'
+import { useState } from 'react'
 
 export default function Header() {
+  const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
+
+  const toggleMenu = () => setMobileMenuOpen(!mobileMenuOpen)
+  const closeMenu = () => setMobileMenuOpen(false)
+
   return (
     <header className="site-header">
       <div className="container">
@@ -10,16 +16,52 @@ export default function Header() {
               <img src="/white-logo.svg" alt="LTFF" style={{height:'28px', width:'auto'}} />
             </div>
           </Link>
-          <div style={{fontWeight:700,fontSize:'1.1rem',color:'var(--primary)'}}>Learning Through Food Foundation Inc.</div>
+          <div style={{fontWeight:700,fontSize:'1.1rem',color:'var(--primary)',display:['none','none','block']}}>Learning Through Food Foundation Inc.</div>
         </div>
-        <nav>
+        
+        {/* Desktop Navigation */}
+        <nav style={{display:mobileMenuOpen ? 'none' : ['none','none','flex']}}>
           <Link href="/#programs">Programs</Link>
           <Link href="/events">Events</Link>
           <Link href="/about">About</Link>
           <Link href="/contact">Contact</Link>
           <Link href="/donate" className="btn primary">Donate</Link>
         </nav>
+
+        {/* Mobile Menu Button */}
+        <button 
+          onClick={toggleMenu}
+          style={{
+            display:['block','block','none'],
+            background:'none',
+            border:'none',
+            cursor:'pointer',
+            padding:'8px',
+            fontSize:'1.5rem'
+          }}
+          aria-label="Toggle menu"
+        >
+          {mobileMenuOpen ? '✕' : '☰'}
+        </button>
       </div>
+
+      {/* Mobile Navigation */}
+      {mobileMenuOpen && (
+        <nav style={{
+          display:'flex',
+          flexDirection:'column',
+          padding:'1rem 2rem',
+          gap:'1rem',
+          background:'white',
+          borderTop:'1px solid var(--border)',
+        }}>
+          <Link href="/#programs" onClick={closeMenu}>Programs</Link>
+          <Link href="/events" onClick={closeMenu}>Events</Link>
+          <Link href="/about" onClick={closeMenu}>About</Link>
+          <Link href="/contact" onClick={closeMenu}>Contact</Link>
+          <Link href="/donate" className="btn primary" style={{width:'100%', textAlign:'center'}} onClick={closeMenu}>Donate</Link>
+        </nav>
+      )}
     </header>
   )
 }
