@@ -489,6 +489,59 @@ nav a:hover{color:var(--accent)}
   }
 }
 
+/* About Page Styles */
+.about-grid{
+  display:grid;
+  grid-template-columns:1fr 2fr;
+  gap:3rem;
+  align-items:start;
+}
+@media(max-width:1024px){.about-grid{gap:2rem}}
+@media(max-width:768px){.about-grid{grid-template-columns:1fr;gap:2rem}}
+
+.about-image{
+  position:relative;
+  height:300px;
+  border-radius:16px;
+  overflow:hidden;
+  box-shadow:0 10px 30px rgba(0,0,0,0.1);
+  width:100%;
+}
+@media(max-width:768px){.about-image{height:250px}}
+@media(max-width:480px){.about-image{height:220px}}
+
+.tab-buttons{
+  display:grid;
+  grid-template-columns:repeat(2,1fr);
+  gap:1rem;
+  margin-bottom:2rem;
+}
+@media(max-width:768px){.tab-buttons{grid-template-columns:repeat(2,1fr);gap:0.75rem}}
+@media(max-width:480px){.tab-buttons{grid-template-columns:1fr;gap:0.75rem}}
+
+.tab-btn{
+  padding:0.75rem 1rem;
+  border-radius:8px;
+  border:none;
+  font-weight:600;
+  cursor:pointer;
+  transition:all 0.3s ease;
+  font-size:0.9rem;
+  min-height:44px;
+}
+@media(max-width:640px){.tab-btn{padding:0.6rem 0.8rem;font-size:0.85rem}}
+@media(max-width:480px){.tab-btn{padding:0.75rem 1rem;font-size:0.9rem}}
+
+.tab-content-box{
+  background:white;
+  border-radius:12px;
+  padding:2rem;
+  border:1px solid var(--border);
+  box-shadow:0 4px 6px -1px rgba(0,0,0,0.05);
+}
+@media(max-width:768px){.tab-content-box{padding:1.5rem}}
+@media(max-width:480px){.tab-content-box{padding:1rem}}
+
 @media(max-width:360px){
   .btn {
     padding:0.5rem 0.8rem;

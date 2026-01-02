@@ -89,10 +89,10 @@ export default function About(){
       <main>
         <section style={{padding:'4rem 0', background:'linear-gradient(135deg, rgba(255,107,53,0.05) 0%, rgba(255,183,153,0.05) 100%)'}}>
           <div className="container">
-            <div style={{display:'grid', gridTemplateColumns:'1fr 2fr', gap:'3rem', alignItems:'start', '@media(max-width:768px)':{gridTemplateColumns:'1fr', gap:'2rem'}}}>
+            <div className="about-grid">
               {/* Image Section */}
-              <div style={{position:'relative', height:'280px', borderRadius:'16px', overflow:'hidden', boxShadow:'0 10px 30px rgba(0,0,0,0.1)', maxWidth:'100%'}}>
-                <Image src="/about-logo.jpg" alt="Learning Through Food" fill style={{objectFit:'cover'}} quality={85} />
+              <div className="about-image">
+                <Image src="/about-logo.jpg" alt="Learning Through Food" fill style={{objectFit:'cover'}} quality={85} priority />
               </div>
 
               {/* Content Section */}
@@ -104,11 +104,12 @@ export default function About(){
                 </div>
 
                 {/* Tab Navigation */}
-                <div style={{display:'flex', gap:'0.5rem', marginBottom:'2rem', flexWrap:'wrap'}}>
+                <div className="tab-buttons">
                   {tabs.map(tab => (
                     <button
                       key={tab.id}
                       onClick={() => setActiveTab(tab.id)}
+                      className={`tab-btn ${activeTab === tab.id ? 'active' : ''}`}
                       style={{
                         padding:'0.75rem 1.5rem',
                         borderRadius:'8px',
@@ -128,7 +129,7 @@ export default function About(){
                 </div>
 
                 {/* Tab Content */}
-                <div style={{background:'white', borderRadius:'12px', padding:'2rem', border:'1px solid var(--border)', boxShadow:'0 4px 6px -1px rgba(0,0,0,0.05)'}}>
+                <div className="tab-content-box">
                   {tabs.map(tab => (
                     activeTab === tab.id && (
                       <div key={tab.id} style={{animation:'fadeIn 0.3s ease'}}>
