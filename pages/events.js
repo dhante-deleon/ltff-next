@@ -77,41 +77,47 @@ export default function Events() {
       <Header />
       <main>
         {/* Events Section */}
-        <section style={{ padding: '4rem 0', background: 'linear-gradient(135deg, rgba(255,107,53,0.05) 0%, rgba(255,183,153,0.05) 100%)' }}>
+        <section style={{ padding: '6rem 0', background: 'linear-gradient(135deg, rgba(255,107,53,0.08) 0%, rgba(255,183,153,0.05) 100%)' }}>
           <div className="container">
             {/* Section Title */}
-            <div style={{ textAlign: 'center', marginBottom: '3rem', maxWidth: '600px', margin: '0 auto 3rem' }}>
-              <h2 style={{ fontSize: '2.5rem', fontWeight: 800, marginBottom: '1rem', color: 'var(--primary)' }}>Events</h2>
-              <p style={{ fontSize: '1.05rem', color: 'var(--secondary)', lineHeight: 1.8 }}>
-                Discover how Learning Through Food Foundation is making a difference in our community through various programs and events.
+            <div style={{ textAlign: 'center', marginBottom: '3.5rem', maxWidth:'650px', margin: '0 auto 3.5rem' }}>
+              <span style={{color:'var(--accent)', fontSize:'0.9rem', fontWeight:700, textTransform:'uppercase', letterSpacing:'1px'}}>Our Events</span>
+              <h1 style={{ fontSize: '3rem', fontWeight: 800, marginTop:'0.5rem', marginBottom: '1rem', color: 'var(--primary)' }}>Making Impact Together</h1>
+              <p style={{ fontSize: '1.1rem', color: 'var(--secondary)', lineHeight: 1.8 }}>
+                Explore how Learning Through Food Foundation is transforming communities through various programs and events.
               </p>
             </div>
 
             {/* Filter Buttons */}
-            <div style={{ display: 'flex', gap: '0.75rem', marginBottom: '3rem', justifyContent: 'center', flexWrap: 'wrap' }}>
+            <div style={{ display: 'flex', gap: '1rem', marginBottom: '3rem', justifyContent: 'center', flexWrap: 'wrap' }}>
               {eventCategories.map(cat => (
                 <button
                   key={cat.id}
                   onClick={() => setActiveFilter(cat.id)}
                   style={{
-                    padding: '0.6rem 1.2rem',
+                    padding: '0.75rem 1.5rem',
                     borderRadius: '8px',
-                    border: 'none',
+                    border:'none',
                     background: activeFilter === cat.id ? 'linear-gradient(135deg, var(--accent), var(--accent-dark))' : 'white',
                     color: activeFilter === cat.id ? 'white' : 'var(--primary)',
                     fontWeight: 600,
                     cursor: 'pointer',
-                    transition: 'all 0.3s ease',
-                    boxShadow: activeFilter === cat.id ? '0 4px 12px rgba(255,107,53,0.3)' : '0 2px 4px rgba(0,0,0,0.05)',
-                    fontSize: '0.9rem'
+                    transition: 'all 250ms ease-in-out',
+                    boxShadow: activeFilter === cat.id ? '0 4px 15px rgba(255,107,53,0.3)' : 'var(--shadow-sm)',
+                    fontSize: '0.95rem',
+                    letterSpacing:'0.3px'
                   }}
                   onMouseEnter={e => {
                     if (activeFilter !== cat.id) {
                       e.target.style.transform = 'translateY(-2px)'
+                      e.target.style.boxShadow = 'var(--shadow-md)'
                     }
                   }}
                   onMouseLeave={e => {
                     e.target.style.transform = 'translateY(0)'
+                    if (activeFilter !== cat.id) {
+                      e.target.style.boxShadow = 'var(--shadow-sm)'
+                    }
                   }}
                 >
                   {cat.label}
@@ -120,7 +126,7 @@ export default function Events() {
             </div>
 
             {/* Gallery Grid */}
-            <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fill, minmax(300px, 1fr))', gap: '2rem' }}>
+            <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fill, minmax(320px, 1fr))', gap: '2.5rem' }}>
               {filteredEvents.map(event => (
                 <div key={event.id} style={{ animation: 'fadeIn 0.3s ease' }}>
                   <div
@@ -128,20 +134,21 @@ export default function Events() {
                       background: 'white',
                       borderRadius: '12px',
                       overflow: 'hidden',
-                      boxShadow: '0 4px 6px -1px rgba(0,0,0,0.1)',
-                      border: '1px solid var(--border)',
-                      transition: 'all 0.3s ease',
-                      cursor: 'pointer'
+                      boxShadow: 'var(--shadow-md)',
+                      border: '1px solid var(--border-light)',
+                      transition: 'all 300ms ease-in-out',
+                      cursor: 'pointer',
+                      position:'relative'
                     }}
                     onMouseEnter={e => {
-                      e.currentTarget.style.transform = 'translateY(-8px)'
-                      e.currentTarget.style.boxShadow = '0 10px 15px -3px rgba(0,0,0,0.15)'
-                      e.currentTarget.style.borderColor = 'var(--accent)'
+                      e.currentTarget.style.transform = 'translateY(-10px)'
+                      e.currentTarget.style.boxShadow = 'var(--shadow-xl)'
+                      e.currentTarget.style.borderColor = 'var(--accent-light)'
                     }}
                     onMouseLeave={e => {
                       e.currentTarget.style.transform = 'translateY(0)'
-                      e.currentTarget.style.boxShadow = '0 4px 6px -1px rgba(0,0,0,0.1)'
-                      e.currentTarget.style.borderColor = 'var(--border)'
+                      e.currentTarget.style.boxShadow = 'var(--shadow-md)'
+                      e.currentTarget.style.borderColor = 'var(--border-light)'
                     }}
                     onClick={() => setSelectedImage(event.image)}
                   >
@@ -151,7 +158,7 @@ export default function Events() {
                         src={event.image}
                         alt={event.title}
                         fill
-                        style={{ objectFit: 'cover' }}
+                        style={{ objectFit: 'cover', transition: 'transform 300ms ease-in-out' }}
                         quality={80}
                       />
                       {/* Zoom Icon Overlay */}
@@ -163,18 +170,18 @@ export default function Events() {
                         alignItems: 'center',
                         justifyContent: 'center',
                         opacity: 0,
-                        transition: 'opacity 0.3s ease'
+                        transition: 'opacity 300ms ease'
                       }} className="overlay-icon">
                         <div style={{ fontSize: '2.5rem', color: 'white' }}>🔍</div>
                       </div>
                     </div>
 
                     {/* Content */}
-                    <div style={{ padding: '1.5rem' }}>
-                      <h4 style={{ fontSize: '1.1rem', fontWeight: 700, marginBottom: '0.5rem', color: 'var(--primary)' }}>
+                    <div style={{ padding: '1.75rem' }}>
+                      <h4 style={{ fontSize: '1.15rem', fontWeight: 700, marginBottom: '0.75rem', color: 'var(--primary)' }}>
                         {event.title}
                       </h4>
-                      <p style={{ fontSize: '0.95rem', color: 'var(--secondary)', margin: 0 }}>
+                      <p style={{ fontSize: '0.95rem', color: 'var(--secondary)', margin: 0, lineHeight:1.5 }}>
                         {event.description}
                       </p>
                     </div>

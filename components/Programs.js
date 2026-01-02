@@ -1,9 +1,9 @@
 import Image from 'next/image'
 
 const items = [
-  {title: 'School Feeding Programs', desc: 'Nutritious meals delivered to students daily, ensuring no child goes hungry while learning.', img:'/images/feeding-prog_1.jpg'},
-  {title: 'Health & Nutrition Workshops', desc: 'Educational sessions teaching families about balanced nutrition and healthy lifestyle choices.', img:'/images/dentis-prog_1.jpg'},
-  {title: 'Community Partnerships', desc: 'Collaborating with local organizations to expand food access and build sustainable programs.', img:'/images/school-supplies-dist_1.jpg'}
+  {title: 'School Feeding Programs', desc: 'Nutritious meals delivered to students daily, ensuring no child goes hungry while learning.', img:'/images/feeding-prog_1.jpg', icon:'🍎'},
+  {title: 'Health & Nutrition Workshops', desc: 'Educational sessions teaching families about balanced nutrition and healthy lifestyle choices.', img:'/images/dentis-prog_1.jpg', icon:'💪'},
+  {title: 'Community Partnerships', desc: 'Collaborating with local organizations to expand food access and build sustainable programs.', img:'/images/school-supplies-dist_1.jpg', icon:'🤝'}
 ]
 
 export default function Programs(){
@@ -14,12 +14,13 @@ export default function Programs(){
       <div className="cards">
         {items.map((it)=> (
           <article key={it.title} className="card">
-            <div style={{position:'relative', width:'100%', height:'300px', borderRadius:'8px', overflow:'hidden', marginBottom:'1.5rem'}}>
-              <Image src={it.img} alt={it.title} fill style={{objectFit:'cover'}} quality={85} priority />
+            <div style={{position:'relative', width:'100%', height:'300px', borderRadius:'12px', overflow:'hidden', marginBottom:'1.5rem'}}>
+              <Image src={it.img} alt={it.title} fill style={{objectFit:'cover'}} quality={85} />
             </div>
+            <div style={{fontSize:'2rem', marginBottom:'0.5rem'}}>{it.icon}</div>
             <h4>{it.title}</h4>
             <p>{it.desc}</p>
-            <a className="link" href="#">Learn more →</a>
+            <a className="link" href="#">Discover more →</a>
           </article>
         ))}
       </div>
