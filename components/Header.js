@@ -9,18 +9,16 @@ export default function Header() {
 
   return (
     <header className="site-header">
-      <div className="container" style={{display:'flex', alignItems:'center', justifyContent:'space-between', padding:'1rem 2rem', flexWrap:'wrap'}}>
-        <div style={{display:'flex',alignItems:'center',gap:16}}>
-          <Link href="/">
-            <div style={{background:'linear-gradient(135deg, var(--accent), var(--accent-dark))', borderRadius:'10px', padding:'8px 14px', display:'flex', alignItems:'center', justifyContent:'center', width:'120px', height:'44px'}}>
-              <img src="/white-logo.svg" alt="LTFF" style={{height:'28px', width:'auto'}} />
-            </div>
-          </Link>
-          <div className="company-name" style={{fontWeight:700,fontSize:'1.1rem',color:'var(--primary)'}}>Learning Through Food Foundation Inc.</div>
-        </div>
+      <div className="header-top" style={{display:'flex', alignItems:'center', justifyContent:'space-between', padding:'1rem 2rem', width:'100%'}}>
+        <Link href="/">
+          <div style={{background:'linear-gradient(135deg, var(--accent), var(--accent-dark))', borderRadius:'10px', padding:'8px 14px', display:'flex', alignItems:'center', justifyContent:'center', width:'120px', height:'44px'}}>
+            <img src="/white-logo.svg" alt="LTFF" style={{height:'28px', width:'auto'}} />
+          </div>
+        </Link>
+        <div className="company-name" style={{fontWeight:700,fontSize:'1.1rem',color:'var(--primary)'}}>Learning Through Food Foundation Inc.</div>
         
         {/* Desktop Navigation */}
-        <nav style={{display:mobileMenuOpen ? 'none' : 'flex'}}>
+        <nav className="desktop-nav" style={{display:'flex', gap:'2rem', alignItems:'center', flex:1, justifyContent:'flex-end', marginRight:'2rem'}}>
           <Link href="/#programs">Programs</Link>
           <Link href="/events">Events</Link>
           <Link href="/about">About</Link>
@@ -37,7 +35,8 @@ export default function Header() {
             border:'none',
             cursor:'pointer',
             padding:'8px',
-            fontSize:'1.5rem'
+            fontSize:'1.5rem',
+            color:'var(--primary)'
           }}
           aria-label="Toggle menu"
         >
@@ -47,7 +46,7 @@ export default function Header() {
 
       {/* Mobile Navigation */}
       {mobileMenuOpen && (
-        <nav style={{
+        <nav className="mobile-nav" style={{
           display:'flex',
           flexDirection:'column',
           padding:'1rem 2rem',
