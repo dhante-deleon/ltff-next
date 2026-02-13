@@ -14,3 +14,9 @@ yarn-error.log*
 *.swo
 .cache/
 .env
+
+# Large video files
+public/videos/*.mp4
+public/videos/*.mov
+public/videos/*.avi
+public/videos/*.webm
