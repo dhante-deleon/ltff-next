@@ -15,8 +15,6 @@ yarn-error.log*
 .cache/
 .env
 
-# Large video files
+# Large video files - kept locally, deployed via Vercel CLI
 public/videos/*.mp4
 public/videos/*.mov
-public/videos/*.avi
-public/videos/*.webm
