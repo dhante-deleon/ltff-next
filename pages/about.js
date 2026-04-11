@@ -41,7 +41,17 @@ We are dedicated to providing nutritious meals and practical education that empo
   {
     id: 'news',
     label: 'Latest News',
-    content: `To all our sponsors and participants at Learning Through Food Foundation's 5th Annual Pro Am Golf Tournament:
+    content: `Dear Participants and Sponsors,
+
+A huge thank you to everyone who took part in and supported our  6th PRO-AM Golf Tournament this past January 13, 2026, at the Canlubang Golf and Country Club. Your presence helped make the day a tremendous success.  It  was  wonderful  to  see  so  many  golfers  come  together  with  our  PROs  for  a  day  of  friendly  competition, camaraderie, and community spirit.  We are especially grateful for your generous sponsorship. Your support was crucial to the event’s success and directly helped our Foundation meet its goal ensuring children can study on a full belly.  We hope you enjoyed the event, and we look forward to the possibility of partnering with you again next year.  
+
+Sincerely,  Andrew and Lota  Co-Founders  Learning Through Food Foundation, Inc.  
+
+Photos and Videos are compiled and can be found here: <a href="https://drive.google.com/drive/folders/1Rj0fFx2r0sEVHRaRlLMgJpizlyhobiO2" target="_blank" rel="noopener noreferrer" style="color: var(--accent); text-decoration: none; font-weight: 600; border-bottom: 2px solid var(--accent);">Google Drive</a>
+
+---
+
+To all our sponsors and participants at Learning Through Food Foundation's 5th Annual Pro Am Golf Tournament:
 
 To all our sponsors who helped make this happen, Lota and I would like to express our deepest gratitude for your generosity and trust you place in us. We welcome you in joining our shared mission to provide the elementary school children of Malaban, Laguna with daily nourishment so that they can study on a full belly.
 
@@ -133,8 +143,7 @@ export default function About(){
                   {tabs.map(tab => (
                     activeTab === tab.id && (
                       <div key={tab.id} style={{animation:'fadeIn 0.3s ease'}}>
-                        <p style={{color:'var(--secondary)', fontSize:'1rem', lineHeight:1.8, margin:0, whiteSpace:'pre-wrap', fontFamily:'inherit'}}>
-                          {tab.content}
+                        <p style={{color:'var(--secondary)', fontSize:'1rem', lineHeight:1.8, margin:0, whiteSpace:'pre-wrap', fontFamily:'inherit'}} dangerouslySetInnerHTML={{__html: tab.content}}>
                         </p>
                       </div>
                     )
