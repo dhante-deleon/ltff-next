@@ -45,7 +45,7 @@ We are dedicated to providing nutritious meals and practical education that empo
 
 Please find below a brief update of our activities for 2025–2026.
 
-OUR MISSION
+<b>OUR MISSION</b>
 
 Learning Through Food Foundation, Inc.'s commitment is to provide a high-quality nutritional feeding program to help eliminate hunger in less fortunate undernourished communities. Working with the teachers and staff of Malaban East Elementary School in Biñan, Laguna, we endeavor to supply a nutritious meal on the condition that the children attend class.
 
@@ -57,15 +57,11 @@ We expect to feed approximately 600 children daily this year. Additionally, we a
 
 Separately, due to increased funding from TotalEnergies Global Services Philippines, we were able to increase our regular Saturday feeding program in Barangay Malaban Zone 1 Dulong Ilaya from 250 to 450 meals. However, beginning June 2026, funding was redirected toward the children's daily feeding program at the school, which is more aligned with our founding principle of "Learning Through Food." As a result, the community outreach program has reverted to 250 meals per feeding day.
 
----
-
-6th PRO-AM GOLF TOURNAMENT
+<b>6TH PRO-AM GOLF TOURNAMENT</b>
 
 Our yearly Pro-Am Golf Tournament was again a success. We continue to grow our sponsor participation, and by 2027 we expect to have all 18 holes sponsored. We sincerely thank Canlubang Golf and Country Club for hosting the event and the PGT professionals who generously donated their time.
 
----
-
-DENTAL MISSION
+<b>DENTAL MISSION</b>
 
 In February, we successfully conducted our third Dental Mission at Malaban East Elementary School in partnership with Sweat It Out Team. A team of 15 dentists and support staff, led by Doc Analie Bolinao, provided oral prophylaxis, tooth extractions, fluoride treatments, oral health education, handwashing drills, lice treatment, and wellness activities for our beneficiaries.
 
@@ -73,33 +69,23 @@ To support this initiative, LTFF's founders donated two portable high-speed dril
 
 The school also presented LTFF with a Certificate of Appreciation for our support through the Dental Mission.
 
----
-
-ACADEMIC RECOGNITION PROGRAM
+<b>ACADEMIC RECOGNITION PROGRAM</b>
 
 At the end of School Year 2025–2026, LTFF hosted a recognition program for Grade 4 and Grade 6 students. Awards were given to students with perfect attendance records and those who demonstrated exemplary academic performance. We believe these awards encourage consistent learning, accountability, and academic excellence.
 
----
-
-SCHOOL SUPPLIES DISTRIBUTION
+<b>SCHOOL SUPPLIES DISTRIBUTION</b>
 
 Every student beneficiary receives an LTFF school supplies kit that includes school bags, paper, pencils, ballpens, and notebooks. This initiative helps reduce the financial burden on families and promotes a more positive learning environment.
 
----
-
-CHRISTMAS GIFT GIVING
+<b>CHRISTMAS GIFT GIVING</b>
 
 Every December, LTFF distributes 300 grocery baskets to families in Malaban, Biñan, Laguna, along with 200 loot bags for children. Distribution is coordinated with community leaders to ensure fairness and order.
 
----
-
-AWARD AND RECOGNITION
+<b>AWARD AND RECOGNITION</b>
 
 The Department of Education Region IV-A CALABARZON, City Schools Division of Biñan, awarded Learning Through Food Foundation, Inc. recognition for its steadfast support, active collaboration, and invaluable contribution toward advancing education programs and school improvement initiatives.
 
----
-
-MESSAGE FROM ANDREW AND LOTA NEMEC
+<b>MESSAGE FROM ANDREW AND LOTA NEMEC</b>
 
 We want to thank our sponsors for the trust they place in us. We are humbled by your generosity and deeply grateful for your support.
 
